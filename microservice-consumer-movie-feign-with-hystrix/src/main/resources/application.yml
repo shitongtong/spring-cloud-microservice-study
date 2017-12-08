@@ -1,0 +1,32 @@
+server:
+  port: 8021
+spring:
+  application:
+    name: microservice-consumer-movie-feign-with-hystrix
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery:8761/eureka/
+  instance:
+    prefer-ip-address: true
+ribbon:
+  eureka:
+    enable: true
+  #ConnectTimeout: 60000
+  #ReadTimeout:  60000
+# 默认为true。如果设置为false，Ribbon将不会从Eureka中获得服务列表，而是使用静态配置的服务列表。
+#静态服务列表可使用：<client>.ribbon.listOfServers来指定。
+#参考：http://projects.spring.io/spring-cloud/docs/1.0.3/spring-cloud.html#spring-cloud-ribbonwithout-eureka
+### 参考：https://spring.io/guides/gs/client-side-load-balancing/
+
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds:  30000 # 请求超时时长，缺省为1000
+#  threadpool:
+#    default:
+#      coreSize: 20  # 请求最大线程数，缺省为10
+#

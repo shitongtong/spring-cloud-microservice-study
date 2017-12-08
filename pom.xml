@@ -10,6 +10,12 @@
     <modules>
         <module>microservice-discovery-eureka</module>
         <module>microservice-provider-user</module>
+        <module>microservice-consumer-movie-ribbon</module>
+        <module>microservice-consumer-movie-feign</module>
+        <module>microservice-consumer-movie-ribbon-with-hystrix</module>
+        <module>microservice-consumer-movie-feign-with-hystrix</module>
+        <module>microservice-hystrix-dashboard</module>
+        <module>microservice-hystrix-turbine</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -21,7 +27,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.6.RELEASE</version>
+        <version>1.5.9.RELEASE</version>
     </parent>
 
     <dependencyManagement>
@@ -29,7 +35,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Dalston.SR4</version>
+                <version>Edgware.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
